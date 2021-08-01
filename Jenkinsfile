@@ -22,7 +22,7 @@ pipeline {
         }
 		stage("Package") {
 			steps {
-				withDockerRegistry([credentialsId: ${env.ACR_ID}, url: "http://${registryUrl}"]) {
+				withDockerRegistry([credentialsId: acr-credentials, url: "http://${registryUrl}"]) {
 					sh """
 						WEB_IMAGE_NAME="${env.ACR_LOGINSERVER}/gs-spring-boot:kube${env.BUILD_NUMBER}"
 						docker build -t \${WEB_IMAGE_NAME} ./
