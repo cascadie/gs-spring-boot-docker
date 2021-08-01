@@ -9,12 +9,15 @@ pipeline {
         dockerImage = ''
         registryUrl = 'myfirstcontainerregistry111.azurecr.io'
     }
-    
+    tools {
+    	maven 'M3'
+  	}
     stages {
 		
 		stage('Build') {
             steps {
-                sh 'mvn install'
+                echo 'Building..'
+                sh "mvn clean install"
             }
         }
 		stage("Package") {
