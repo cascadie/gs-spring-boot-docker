@@ -11,8 +11,13 @@ pipeline {
     }
     
     stages {
-
-		stage("Build") {
+		
+		stage('Build') {
+            steps {
+                sh 'mvn install'
+            }
+        }
+		stage("Package") {
 			steps {
 				sh """
 					WEB_IMAGE_NAME="${env.ACR_LOGINSERVER}/gs-spring-boot:kube${env.BUILD_NUMBER}"
