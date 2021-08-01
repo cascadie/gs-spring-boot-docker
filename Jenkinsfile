@@ -17,7 +17,7 @@ pipeline {
 				sh """
 					echo "aaaaaaaaaaaaaaaaaaa"
 					WEB_IMAGE_NAME="${env.ACR_LOGINSERVER}/gs-spring-boot:kube${env.BUILD_NUMBER}"
-					echo "${WEB_IMAGE_NAME}"
+					echo ${WEB_IMAGE_NAME}
 				"""
 			}
 		}
