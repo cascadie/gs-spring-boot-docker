@@ -36,7 +36,7 @@ pipeline {
 				sh """
 					echo "deploy"
 					WEB_IMAGE_NAME="${env.ACR_LOGINSERVER}/gs-spring-boot:kube${env.BUILD_NUMBER}"
-					kubectl set image deployment/gs-spring-boot gs-spring-boot=\$WEB_IMAGE_NAME
+					kubectl set image deployment/gs-spring-boot gs-spring-boot-docker=\$WEB_IMAGE_NAME
 				"""
 			}
 		}
