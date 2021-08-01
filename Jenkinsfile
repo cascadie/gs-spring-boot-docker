@@ -15,10 +15,12 @@ pipeline {
 		stage("Build") {
 			steps {
 				sh """
-					WEB_IMAGE_NAME="${ACR_LOGINSERVER}/gs-spring-boot:kube${BUILD_NUMBER}"
-					docker build -t ${WEB_IMAGE_NAME} ./gs-spring-boot
-					docker login ${ACR_LOGINSERVER} -u ${ACR_ID} -p ${ACR_PASSWORD}
-					docker push ${WEB_IMAGE_NAME}
+					echo "+++++++++++++++++++++++++++++++++++++++"
+					echo "${ACR_LOGINSERVER}"
+					echo "${BUILD_NUMBER}"
+					echo "${ACR_ID} "
+					WEB_IMAGE_NAME="/gs-spring-boot:kube"
+					echo "${WEB_IMAGE_NAME}"
 				"""
 			}
 		}
