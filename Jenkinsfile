@@ -10,7 +10,7 @@ pipeline {
         registryUrl = 'myfirstcontainerregistry111.azurecr.io'
     }
     tools {
-    	maven 'M3'
+    	maven 'maven 3.8.1'
   	}
     stages {
 		
