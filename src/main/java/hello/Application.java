@@ -14,6 +14,10 @@ public class Application {
 		String a="a";
 		a="a";
 		a="a";
+		String b="a";
+		b="a";
+		b="a";
+		a=b;
 		return "<h1>Hello World</h1>";
 	}
 
