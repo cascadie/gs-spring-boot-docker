@@ -11,9 +11,6 @@ public class Application {
 
 	@RequestMapping("/")
 	public String home() {
-		String a = "a";
-		a ="a";
-		a ="a";
 		return "<h1>Hello World</h1>";
 	}
 
