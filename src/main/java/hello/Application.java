@@ -18,6 +18,7 @@ public class Application {
 		b="a";
 		b="a";
 		a=b;
+		int x=0;
 		for (int i = 0; i < 10; i++) { // noncompliant, loop only executes once
   if (i == x) {
     break;
